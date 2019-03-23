@@ -865,6 +865,27 @@
                             <binding destination="kYx-rb-NsK" name="value" keyPath="selection.ticketCount" id="5Yv-qk-Hea"/>
                         </connections>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOk-ng-7V2">
+                        <rect key="frame" x="293" y="87" width="362" height="123"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" drawsBackground="YES" id="GTD-WB-Eue">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="96V-q3-SBb" name="fontSize" keyPath="values.fontsize" id="IEp-Am-HW7"/>
+                            <binding destination="96V-q3-SBb" name="value" keyPath="values.fontsize" id="Wuw-In-pti"/>
+                        </connections>
+                    </textField>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JtH-6b-cQ5">
+                        <rect key="frame" x="299" y="62" width="364" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="G1d-zk-bdg"/>
+                        <connections>
+                            <binding destination="96V-q3-SBb" name="value" keyPath="values.fontsize" id="fqS-SK-Ch6"/>
+                        </connections>
+                    </slider>
                 </subviews>
             </view>
             <point key="canvasLocation" x="560.5" y="-318.5"/>

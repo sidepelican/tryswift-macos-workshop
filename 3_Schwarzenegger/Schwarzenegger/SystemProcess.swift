@@ -94,7 +94,20 @@ extension SystemProcess {
     /// Execute the `ps` command to retrieve cpu usage per pid
     static private func executePs() -> String? {
         let psCommand = "ps -axo pcpu,pid"
-        /// What to do here?
-        return nil
+
+        let process = Process()
+        process.launchPath = "/bin/sh"
+        process.arguments = [
+            "-c",
+            psCommand
+        ]
+
+        let output = Pipe()
+        process.standardOutput = output
+        process.launch()
+        process.waitUntilExit()
+
+        let data = output.fileHandleForReading.readDataToEndOfFile()
+        return String(data: data, encoding: .utf8)
     }
 }

@@ -681,7 +681,7 @@
                 </menuItem>
             </items>
         </menu>
-        <arrayController objectClassName="Developer" id="kYx-rb-NsK"/>
+        <arrayController objectClassName="SimpleExample.Developer" id="kYx-rb-NsK"/>
         <window title="SimpleExample" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -790,7 +790,8 @@
                                     </tableColumns>
                                     <connections>
                                         <binding destination="kYx-rb-NsK" name="content" keyPath="arrangedObjects" id="twT-6c-sxC"/>
-                                        <binding destination="kYx-rb-NsK" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="twT-6c-sxC" id="bsI-YO-r4L"/>
+                                        <binding destination="kYx-rb-NsK" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="twT-6c-sxC" id="V2x-8l-SWm"/>
+                                        <binding destination="kYx-rb-NsK" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="V2x-8l-SWm" id="ZqY-wV-WrU"/>
                                     </connections>
                                 </tableView>
                             </subviews>
@@ -816,7 +817,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="add:" target="kYx-rb-NsK" id="ipF-zK-Q8c"/>
+                            <action selector="add:" target="kYx-rb-NsK" id="dYW-rN-1FM"/>
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dwK-eN-b7C">
@@ -840,9 +841,34 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuo-aF-LyR">
+                        <rect key="frame" x="301" y="259" width="96" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="YOn-ML-lBC">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="kYx-rb-NsK" name="value" keyPath="selection.username" id="Kfc-Xo-dp4"/>
+                        </connections>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C9g-9o-DnS">
+                        <rect key="frame" x="417" y="259" width="96" height="22"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="QxQ-5o-QDf">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="kYx-rb-NsK" name="value" keyPath="selection.ticketCount" id="5Yv-qk-Hea"/>
+                        </connections>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="560.5" y="-318.5"/>
         </window>
+        <userDefaultsController id="96V-q3-SBb"/>
     </objects>
 </document>

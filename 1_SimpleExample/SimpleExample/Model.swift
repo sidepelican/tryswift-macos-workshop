@@ -1,6 +1,5 @@
 import Cocoa
 
-@objc(Developer)
 public class Developer: NSObject {
     @objc var username: String = ""
     @objc var ticketCount: Int = 0

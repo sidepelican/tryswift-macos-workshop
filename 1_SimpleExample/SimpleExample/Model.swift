@@ -17,7 +17,7 @@ extension Branch {
 public class Developer: NSObject {
     @objc var username: String = "no name"
     @objc var ticketCount: Int = 0
-    @objc var branches: [Branch] = [.Master]
+    @objc var branches: [Branch] = []
 
     init(_ username: String, ticketCount: Int, branches: [Branch] = [.Master]) {
         self.username = username

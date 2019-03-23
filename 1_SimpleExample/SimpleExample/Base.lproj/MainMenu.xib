@@ -681,12 +681,16 @@
                 </menuItem>
             </items>
         </menu>
-        <arrayController objectClassName="SimpleExample.Developer" id="kYx-rb-NsK"/>
+        <arrayController objectClassName="SimpleExample.Developer" id="kYx-rb-NsK">
+            <connections>
+                <binding destination="Voe-Tx-rLC" name="selectionIndexes" keyPath="selectedDeveloper" id="H7G-Fx-akS"/>
+            </connections>
+        </arrayController>
         <window title="SimpleExample" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="655" height="395"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="655" height="395"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -975,6 +979,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="243" height="25"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
+                        <connections>
+                            <binding destination="kYx-rb-NsK" name="hidden" keyPath="selectionIndexes" id="jaC-Zm-OL7">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">EmptySelectionMeans</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
                     </scrollView>
                     <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrH-XA-2jy">
                         <rect key="frame" x="0.0" y="3" width="179" height="22"/>
@@ -1007,7 +1018,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="163" y="199" width="480" height="270"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" misplaced="YES" id="Xkz-NZ-FMD">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>

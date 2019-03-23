@@ -15,11 +15,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc dynamic var selectedDeveloper: NSIndexSet? {
         didSet {
+            guard let selectedIndex = selectedDeveloper?.firstIndex,
+                let developers = arrayController.content as? NSArray,
+                selectedIndex < developers.count,
+                let developer = developers.object(at: selectedIndex) as? Developer else {
+                    return
+            }
 
+            print(developer.username)
         }
     }
 
     override init() {
+        ValueTransformer.setValueTransformer(EmptySelectionMeans(emptyValue: true),
+                                             forName: NSValueTransformerName("EmptySelectionMeans"))
+
         super.init()
     }
 

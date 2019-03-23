@@ -51,13 +51,14 @@ final class LoveLetterController: NSViewController {
     @objc var ignoreMerges: Bool = false {
         didSet {
             // what to do here?
+            secondCommitsArrayController?.filterPredicate = ignoreMerges ? NSPredicate(format: "SELF.isMerge == false") : nil
         }
     }
     
     // MARK: Interface Builder Interaction
     
     @IBAction func closeDiffSidebar(_ sender: NSButton?) {
-        // what to do here?
+        thirdCommitsArrayController?.setSelectedObjects([])
     }
     
     // MARK: Private

@@ -35,6 +35,7 @@ final class ProjectController: NSViewController {
     @IBAction func doTogglePlay(sender: AnyObject?) {
         if let t = self.timer {
             t.invalidate()
+            timer = nil
         } else {
             schedule()
         }

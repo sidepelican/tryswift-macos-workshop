@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.13.2"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="14313.13.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -720,13 +720,13 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="66" y="991"/>
+            <point key="canvasLocation" x="-222" y="528"/>
         </menu>
         <window title="LoveLetters" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="944" height="555"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1050"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="944" height="555"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -799,11 +799,11 @@
                                                 </tableView>
                                             </subviews>
                                         </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="nHP-JG-jaJ">
-                                            <rect key="frame" x="0.0" y="539" width="138" height="16"/>
+                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="nHP-JG-jaJ">
+                                            <rect key="frame" x="0.0" y="539" width="91" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="8SQ-qp-TNq">
+                                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="8SQ-qp-TNq">
                                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
@@ -957,12 +957,13 @@
                                                     </connections>
                                                 </tableView>
                                             </subviews>
+                                            <nil key="backgroundColor"/>
                                         </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="1Ow-EJ-81Q">
+                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="1Ow-EJ-81Q">
                                             <rect key="frame" x="0.0" y="539" width="318" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="GNU-F6-0X5">
+                                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="GNU-F6-0X5">
                                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
@@ -986,7 +987,7 @@
                                         </webPreferences>
                                     </webView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KE9-zc-rRN">
-                                        <rect key="frame" x="2" y="527" width="56" height="28"/>
+                                        <rect key="frame" x="2" y="527" width="56" height="27"/>
                                         <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a09-vh-F1V">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="smallSystem"/>
@@ -1005,6 +1006,13 @@
                                     <constraint firstItem="KE9-zc-rRN" firstAttribute="leading" secondItem="Zr4-aX-wIt" secondAttribute="leading" constant="7" id="bIc-P8-137"/>
                                     <constraint firstItem="KE9-zc-rRN" firstAttribute="top" secondItem="Zr4-aX-wIt" secondAttribute="top" constant="4" id="jaP-jF-JuF"/>
                                 </constraints>
+                                <connections>
+                                    <binding destination="Xqf-Js-TpY" name="hidden" keyPath="selectionIndexes" id="iE1-EW-6iE">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">IsEmptySelection</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
                             </customView>
                         </subviews>
                         <holdingPriorities>

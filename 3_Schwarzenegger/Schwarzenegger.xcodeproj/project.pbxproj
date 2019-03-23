@@ -12,6 +12,7 @@
 		3B15BEF421AD85B3008CAAEA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B15BEF221AD85B3008CAAEA /* MainMenu.xib */; };
 		3B15BEFD21AD85F8008CAAEA /* TerminatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15BEFC21AD85F8008CAAEA /* TerminatorController.swift */; };
 		3B15BF0121AFDCD6008CAAEA /* SystemProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15BF0021AFDCD6008CAAEA /* SystemProcess.swift */; };
+		838ECF7C2245DEA000C8D204 /* ValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838ECF7B2245DEA000C8D204 /* ValueTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		3B15BEF621AD85B3008CAAEA /* Schwarzenegger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Schwarzenegger.entitlements; sourceTree = "<group>"; };
 		3B15BEFC21AD85F8008CAAEA /* TerminatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminatorController.swift; sourceTree = "<group>"; };
 		3B15BF0021AFDCD6008CAAEA /* SystemProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProcess.swift; sourceTree = "<group>"; };
+		838ECF7B2245DEA000C8D204 /* ValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				3B15BEF621AD85B3008CAAEA /* Schwarzenegger.entitlements */,
 				3B15BEFC21AD85F8008CAAEA /* TerminatorController.swift */,
 				3B15BF0021AFDCD6008CAAEA /* SystemProcess.swift */,
+				838ECF7B2245DEA000C8D204 /* ValueTransformer.swift */,
 			);
 			path = Schwarzenegger;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B15BEFD21AD85F8008CAAEA /* TerminatorController.swift in Sources */,
+				838ECF7C2245DEA000C8D204 /* ValueTransformer.swift in Sources */,
 				3B15BF0121AFDCD6008CAAEA /* SystemProcess.swift in Sources */,
 				3B15BEEF21AD85B2008CAAEA /* AppDelegate.swift in Sources */,
 			);

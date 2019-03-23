@@ -740,7 +740,11 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <connections>
-                                                                <binding destination="Xeq-40-i4x" name="value" keyPath="objectValue.name" id="JOH-22-HBw"/>
+                                                                <binding destination="Xeq-40-i4x" name="value" keyPath="objectValue" id="zMf-ft-lVs">
+                                                                    <dictionary key="options">
+                                                                        <string key="NSValueTransformerName">Schwarzenegger.ImageEmbeddingTransformer</string>
+                                                                    </dictionary>
+                                                                </binding>
                                                             </connections>
                                                         </textField>
                                                     </subviews>

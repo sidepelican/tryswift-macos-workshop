@@ -13,6 +13,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var arrayController: NSArrayController!
 
+    @objc dynamic var selectedDeveloper: NSIndexSet? {
+        didSet {
+
+        }
+    }
+
     override init() {
         super.init()
     }

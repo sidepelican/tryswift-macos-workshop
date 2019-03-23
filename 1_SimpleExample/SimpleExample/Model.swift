@@ -1,5 +1,6 @@
 import Cocoa
 
+@objc(Developer)
 public class Developer: NSObject {
     @objc var username: String = ""
     @objc var ticketCount: Int = 0
@@ -7,6 +8,13 @@ public class Developer: NSObject {
     init(_ username: String, ticketCount: Int) {
         self.username = username
         self.ticketCount = ticketCount
+        super.init()
+    }
+
+    override init() {
+        username = "no name"
+        ticketCount = 0
+
         super.init()
     }
 }

@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        arrayController.content = NSMutableArray(array: Model.developers)
     }
 }
 
